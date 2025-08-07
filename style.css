@@ -5,13 +5,86 @@
   --breakpoint-xl: 1500px;
   --light: #f9fafb;
   --dark: #111827;
+  --secondary: #455c8c;
   --accent: #11d020;
-  --gradient1: #04619f;
-  --gradient2: #0f52ba;
   --smokewhite: #f5f5f5;
   --font-subject: "Edu SA Hand";
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
 body {
+  position: relative;
   background-color: var(--dark);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5% 1rem 5%;
+}
+
+nav img {
+  max-width: 200px;
+}
+
+#background-decoration-blob {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 250px;
+  width: 45%;
+  background-color: var(--secondary);
+  border-bottom-left-radius: 100%;
+  z-index: 2;
+
+  animation: blob-pulse 10s infinite;
+}
+
+#main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 3;
+  font-size: 1.2rem;
+}
+
+#main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+}
+.main-nav-normal-element {
+  text-decoration: none;
+  color: var(--light);
+}
+#check-now-cta {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  border-radius: 20px;
+  margin-left: 3rem;
+  color: var(--dark);
+  transition: 0.3s ease-out;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+#check-now-cta:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+
+@keyframes blob-pulse {
+  0%,
+  100% {
+    border-bottom-left-radius: 100%;
+  }
+  50% {
+    border-bottom-left-radius: 95%;
+  }
 }
