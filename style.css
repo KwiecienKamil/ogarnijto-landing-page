@@ -21,13 +21,17 @@
 body {
   position: relative;
   background-color: var(--dark);
+  color: var(--light);
+}
+#main-wrapper {
+  padding: 0 5%;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 5% 1rem 5%;
+  padding: 1rem 0;
 }
 
 nav img {
@@ -44,7 +48,7 @@ nav img {
   border-bottom-left-radius: 100%;
   z-index: 2;
 
-  animation: blob-pulse 10s infinite;
+  animation: blob-pulse 7s infinite;
 }
 
 #main-nav {
@@ -67,7 +71,6 @@ nav img {
   padding: 0.5rem 1rem;
   background: var(--accent);
   border-radius: 20px;
-  margin-left: 3rem;
   color: var(--dark);
   transition: 0.3s ease-out;
   text-transform: uppercase;
@@ -79,12 +82,24 @@ nav img {
   color: var(--light);
 }
 
+#hero {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#hero img {
+  max-width: 60rem;
+  z-index: 5;
+}
+
 @keyframes blob-pulse {
   0%,
   100% {
     border-bottom-left-radius: 100%;
   }
   50% {
-    border-bottom-left-radius: 95%;
+    border-bottom-left-radius: 90%;
   }
 }
