@@ -44,10 +44,9 @@ nav img {
   right: 0;
   height: 250px;
   width: 45%;
-  background-color: var(--secondary);
+  background-color: #e48d8d;
   border-bottom-left-radius: 100%;
   z-index: 2;
-
   animation: blob-pulse 7s infinite;
 }
 
@@ -75,10 +74,13 @@ nav img {
   transition: 0.3s ease-out;
   text-transform: uppercase;
   font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
 }
 
 #check-now-cta:hover {
-  background: var(--dark);
+  filter: brightness(105%);
   color: var(--light);
 }
 
@@ -88,10 +90,46 @@ nav img {
   align-items: center;
   justify-content: space-between;
 }
+#hero-text {
+  max-width: 40%;
+}
+#hero-text p {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+#hero-text span {
+  margin-top: 0.5rem;
+}
+
+#hero-text button {
+  margin-top: 2rem;
+}
 
 #hero img {
   max-width: 60rem;
   z-index: 5;
+}
+
+.section-heading {
+  position: relative;
+  font-size: 2rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.section-heading:before {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: var(--light);
+  bottom: 0;
+  content: "";
+}
+
+#how-to-use {
+  text-align: center;
+  margin-top: 3rem;
 }
 
 @keyframes blob-pulse {
