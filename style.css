@@ -67,7 +67,7 @@ nav img {
   color: var(--light);
 }
 #check-now-cta {
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   background: var(--accent);
   border-radius: 10px;
   color: var(--dark);
@@ -104,8 +104,12 @@ nav img {
 }
 
 #hero img {
-  max-width: 60%;
+  max-width: 55%;
   z-index: 5;
+}
+
+#hero-video {
+  max-width: 60%;
 }
 
 #hero-btn {
@@ -116,7 +120,7 @@ nav img {
   background-color: var(--accent);
   border-radius: 1rem;
   font-weight: 600;
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -143,11 +147,11 @@ nav img {
 }
 
 #how-to-use {
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 
 #how-to-use-wrapper {
-  text-align: center
+  text-align: center;
 }
 
 #how-to-use-info {
@@ -165,7 +169,7 @@ nav img {
 }
 
 #how-to-use-info div ul {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   font-size: 1.2rem;
 }
 
