@@ -173,6 +173,39 @@ nav img {
   font-size: 1.2rem;
 }
 
+#review-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.review-card {
+  padding: 1rem;
+  background-color: #455c8c;
+  border-radius: 1rem;
+}
+.review-card h4 {
+  font-size: 1.3rem;
+}
+
+.review-card p {
+  margin-top: 1rem;
+}
+
+.review-card-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--light);
+  padding: 2rem 5%;
+  color: var(--dark);
+}
 @keyframes blob-pulse {
   0%,
   100% {
