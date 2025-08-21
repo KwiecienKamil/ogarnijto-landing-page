@@ -241,3 +241,29 @@ nav img {
     width: 20%;
   }
 }
+
+
+@media screen and (max-width: 1500px) {
+  #background-decoration-blob {
+    width: 20%;
+    height: 180px;
+  }
+  #hero, #how-to-use-info {
+    flex-direction: column;
+  }
+  #hero img {
+    margin-top: 2rem;
+    max-width: 80%;
+  }
+
+  #hero-text {
+    max-width: 100%;
+    text-align: center;
+  }
+  #how-to-use-info {
+    text-align: center;
+  }
+  #how-to-use-info video {
+    max-width: 95%;
+  }
+}
