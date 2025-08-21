@@ -79,8 +79,7 @@ nav img {
 }
 
 #check-now-cta:hover {
-  filter: brightness(105%);
-  color: var(--light);
+  background: #0ba718;
 }
 
 #hero {
@@ -88,6 +87,20 @@ nav img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+}
+
+#hero-background-decoration-blob {
+  position: absolute;
+  bottom: -100px;
+  left: -200px;
+  height: 200px;
+  width: 15%;
+  background-color: #e48d8d;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  z-index: 2;
+  animation: blob-pulse2 9s infinite;
 }
 #hero-text {
   max-width: 40%;
@@ -113,6 +126,7 @@ nav img {
 }
 
 #hero-btn {
+  display: inline-block;
   margin-top: 2rem;
   padding: 1rem 2rem;
   font-size: 1.4rem;
@@ -122,6 +136,8 @@ nav img {
   font-weight: 600;
   transition: 0.3s;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--dark);
 }
 
 #hero-btn:hover {
@@ -213,5 +229,15 @@ nav img {
   }
   50% {
     border-bottom-left-radius: 90%;
+  }
+}
+
+@keyframes blob-pulse2 {
+  0%,
+  100% {
+    width: 15%;
+  }
+  50% {
+    width: 20%;
   }
 }
