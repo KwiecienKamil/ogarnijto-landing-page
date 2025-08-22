@@ -27,6 +27,8 @@ body {
   padding: 0 5%;
 }
 
+
+
 nav {
   display: flex;
   align-items: center;
@@ -58,6 +60,9 @@ nav img {
   font-size: 1.2rem;
 }
 
+.fa-bars {
+  display: none;
+}
 #main-nav a {
   text-decoration: none;
   font-weight: 600;
@@ -190,14 +195,15 @@ nav img {
 }
 
 #review-card-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
   margin-bottom: 3rem;
 }
 .review-card {
   padding: 1rem;
-  background-color: #455c8c;
+  background-color: white;
+  color: var(--dark);
   border-radius: 1rem;
 }
 .review-card h4 {
@@ -243,6 +249,32 @@ nav img {
 }
 
 
+@media screen and (max-width: 600px) {
+  #review-card-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #review-card-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #main-nav {
+    position: fixed;
+    right: -100%;
+  }
+  .fa-bars {
+    z-index: 10;
+    font-size: 2rem;
+  }
+
+}
+
+
 @media screen and (max-width: 1500px) {
   #background-decoration-blob {
     width: 20%;
@@ -266,4 +298,9 @@ nav img {
   #how-to-use-info video {
     max-width: 95%;
   }
+
+  #review-card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
