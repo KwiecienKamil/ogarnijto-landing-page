@@ -227,6 +227,10 @@ nav img {
   padding: 2rem 5%;
   color: var(--dark);
 }
+
+ .close-nav {
+  display: none;
+ }
 @keyframes blob-pulse {
   0%,
   100% {
@@ -263,11 +267,35 @@ nav img {
 @media screen and (max-width: 1200px) {
   #main-nav {
     position: fixed;
-    right: -100%;
+    top: 0;
+    right: -100%; 
+    flex-direction: column;
+    background: var(--dark);
+    width: 30%; 
+    height: 100vh;
+    padding: 2rem;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.5);
+    z-index: 12;
   }
-  .fa-bars {
-    z-index: 10;
+   .fa-bars {
+    display: block;
+    cursor: pointer;
+    z-index: 11;
+    font-size: 1.5rem;
+  }
+
+  #main-nav.active {
+    right: 0; 
+  }
+
+  .close-nav {
+    display: block;
     font-size: 2rem;
+    color: var(--light);
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 2rem;
   }
 }
 
