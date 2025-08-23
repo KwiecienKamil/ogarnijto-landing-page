@@ -27,8 +27,6 @@ body {
   padding: 0 5%;
 }
 
-
-
 nav {
   display: flex;
   align-items: center;
@@ -187,6 +185,7 @@ nav img {
 
 #how-to-use-info div h3 {
   font-size: 3rem;
+  margin: 1rem 0;
 }
 
 #how-to-use-info div ul {
@@ -248,7 +247,6 @@ nav img {
   }
 }
 
-
 @media screen and (max-width: 600px) {
   #review-card-wrapper {
     display: flex;
@@ -271,16 +269,15 @@ nav img {
     z-index: 10;
     font-size: 2rem;
   }
-
 }
-
 
 @media screen and (max-width: 1500px) {
   #background-decoration-blob {
     width: 20%;
     height: 180px;
   }
-  #hero, #how-to-use-info {
+  #hero,
+  #how-to-use-info {
     flex-direction: column;
   }
   #hero img {
@@ -303,4 +300,3 @@ nav img {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
