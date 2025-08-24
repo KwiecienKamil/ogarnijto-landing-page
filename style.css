@@ -41,9 +41,9 @@ nav img {
 #background-decoration-blob {
   position: absolute;
   top: 0;
-  right: 0;
-  height: 250px;
-  width: 45%;
+  right: -50px;
+  height: 10rem;
+  width: 55%;
   background-color: #e48d8d;
   border-bottom-left-radius: 100%;
   z-index: 2;
@@ -56,6 +56,9 @@ nav img {
   gap: 1rem;
   z-index: 3;
   font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background: var(--dark);
 }
 
 .fa-bars {
@@ -70,9 +73,9 @@ nav img {
   color: var(--light);
 }
 #check-now-cta {
-  padding: 0.5rem 1.5rem;
+  padding: 1rem 1.5rem;
   background: var(--accent);
-  border-radius: 10px;
+  border-radius: 1rem;
   color: var(--dark);
   transition: 0.3s ease-out;
   font-size: 1.2rem;
@@ -177,20 +180,16 @@ nav img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 #how-to-use-info img {
   max-width: 60rem;
 }
 
-#how-to-use-info div h3 {
-  font-size: 3rem;
-  margin: 1rem 0;
-}
-
-#how-to-use-info div ul {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
+#how-to-use-info div img {
+  margin: 2rem 0;
+  max-width: 100%;
 }
 
 #review-card-wrapper {
@@ -228,9 +227,9 @@ nav img {
   color: var(--dark);
 }
 
- .close-nav {
+.close-nav {
   display: none;
- }
+}
 @keyframes blob-pulse {
   0%,
   100% {
@@ -263,22 +262,25 @@ nav img {
     display: flex;
     flex-direction: column;
   }
+  #main-wrapper {
+    padding: 0 2%;
+  }
 }
 @media screen and (max-width: 1200px) {
   #main-nav {
     position: fixed;
     top: 0;
-    right: -100%; 
+    right: -100%;
     flex-direction: column;
     background: var(--dark);
-    width: 30%; 
+    width: 30%;
     height: 100vh;
     padding: 2rem;
     transition: right 0.3s ease-in-out;
     box-shadow: -4px 0 12px rgba(0, 0, 0, 0.5);
     z-index: 12;
   }
-   .fa-bars {
+  .fa-bars {
     display: block;
     cursor: pointer;
     z-index: 11;
@@ -286,7 +288,7 @@ nav img {
   }
 
   #main-nav.active {
-    right: 0; 
+    right: 0;
   }
 
   .close-nav {
@@ -301,7 +303,7 @@ nav img {
 
 @media screen and (max-width: 1500px) {
   #background-decoration-blob {
-    width: 20%;
+    width: 25%;
     height: 180px;
   }
   #hero,
