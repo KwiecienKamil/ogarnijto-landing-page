@@ -25,6 +25,7 @@ body {
 }
 #main-wrapper {
   padding: 0 5%;
+  overflow: hidden;
 }
 
 nav {
@@ -39,15 +40,16 @@ nav img {
 }
 
 #background-decoration-blob {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -50px;
   height: 10rem;
   width: 55%;
   background-color: #e48d8d;
   border-bottom-left-radius: 100%;
-  z-index: 2;
+  z-index: -1;
   animation: blob-pulse 7s infinite;
+  transition: .5s;
 }
 
 #main-nav {
@@ -100,8 +102,8 @@ nav img {
   position: absolute;
   bottom: -100px;
   left: -200px;
-  height: 200px;
-  width: 15%;
+  height: 40%;
+  width: 10%;
   background-color: #e48d8d;
   border-top-right-radius: 100%;
   border-bottom-right-radius: 100%;
@@ -194,14 +196,14 @@ nav img {
 
 #review-card-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-bottom: 3rem;
 }
 .review-card {
   padding: 1rem;
-  background-color: white;
-  color: var(--dark);
+  background-color: black;
+  color: var(--smokewhite);
   border-radius: 1rem;
 }
 .review-card h4 {
@@ -243,10 +245,10 @@ nav img {
 @keyframes blob-pulse2 {
   0%,
   100% {
-    width: 15%;
+    width: 10%;
   }
   50% {
-    width: 20%;
+    width: 15%;
   }
 }
 
