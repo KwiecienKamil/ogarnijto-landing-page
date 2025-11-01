@@ -18,6 +18,10 @@
   font-family: "Inter", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   background-color: var(--dark);
@@ -49,7 +53,7 @@ nav img {
   border-bottom-left-radius: 100%;
   z-index: -1;
   animation: blob-pulse 7s infinite;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 #main-nav {
@@ -57,7 +61,7 @@ nav img {
   align-items: center;
   gap: 1rem;
   z-index: 3;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   background: var(--dark);
@@ -182,11 +186,16 @@ nav img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
 }
 
-#how-to-use-info img {
-  max-width: 60rem;
+#how-to-use div h4 {
+  font-size: 2.5rem;
+}
+#how-to-use div p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: justify;
 }
 
 #how-to-use-info div img {
@@ -229,6 +238,11 @@ nav img {
   color: var(--dark);
 }
 
+#footer div a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--dark);
+}
 .close-nav {
   display: none;
 }
@@ -251,23 +265,36 @@ nav img {
     width: 15%;
   }
 }
-
-@media screen and (max-width: 600px) {
-  #review-card-wrapper {
-    display: flex;
+@media screen and (max-width: 1500px) {
+  #background-decoration-blob {
+    width: 25%;
+    height: 180px;
+  }
+  #hero,
+  #how-to-use-info {
     flex-direction: column;
+  }
+  #hero img {
+    margin-top: 2rem;
+    max-width: 80%;
+  }
+
+  #hero-text {
+    max-width: 100%;
+    text-align: center;
+  }
+  #how-to-use-info {
+    text-align: center;
+  }
+  #how-to-use-info video {
+    max-width: 95%;
+  }
+
+  #review-card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 800px) {
-  #review-card-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  #main-wrapper {
-    padding: 0 2%;
-  }
-}
 @media screen and (max-width: 1200px) {
   #main-nav {
     position: fixed;
@@ -301,34 +328,36 @@ nav img {
     cursor: pointer;
     margin-bottom: 2rem;
   }
+
+  #check-now-cta {
+    padding: 1rem 0.5rem;
+  }
 }
 
-@media screen and (max-width: 1500px) {
-  #background-decoration-blob {
-    width: 25%;
-    height: 180px;
-  }
-  #hero,
-  #how-to-use-info {
+@media screen and (max-width: 600px) {
+  #review-card-wrapper {
+    display: flex;
     flex-direction: column;
   }
-  #hero img {
-    margin-top: 2rem;
-    max-width: 80%;
-  }
+}
 
-  #hero-text {
-    max-width: 100%;
-    text-align: center;
-  }
-  #how-to-use-info {
-    text-align: center;
-  }
-  #how-to-use-info video {
-    max-width: 95%;
-  }
-
+@media screen and (max-width: 800px) {
   #review-card-wrapper {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+  }
+  #main-wrapper {
+    padding: 0 2%;
+  }
+
+  #how-to-use div p {
+    padding: 1rem;
+  }
+  #main-nav {
+    width: 100%;
+  }
+
+  #footer {
+    font-size: 0.8rem;
   }
 }
